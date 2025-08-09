@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Legalese | Smart Legal Studio</title>
+  <link href="https://cdn.jsdelivr.net/npm/tailwindcss@2.2.19/dist/tailwind.min.css" rel="stylesheet"/>
+  <link rel="manifest" href="manifest.json"/>
+  <meta name="theme-color" content="#2563eb"/>
+  <link href="css/styles.css" rel="stylesheet"/>
+  <script src="js/app.js" defer></script>
+</head>
+<body class="bg-gray-100 text-gray-900 min-h-screen flex flex-col">
+
+  <!-- Navbar -->
+  <nav class="bg-white shadow-md sticky top-0 z-50">
+    <div class="max-w-7xl mx-auto px-4 py-4 flex justify-between items-center">
+      <div class="flex items-center space-x-3">
+        <a href="index.html">
+          <img src="assets/logo.png" alt="Logo" class="w-10 h-10 rounded-full shadow"/>
+        </a>
+        <span class="text-2xl font-semibold text-blue-600">Legalese</span>
+      </div>
+      <div class="space-x-6 hidden md:flex" id="nav-links">
+        <a href="index.html" class="text-sm font-medium text-blue-600 font-bold">Home</a>
+        <a href="profile.html" class="text-sm font-medium text-gray-700 hover:text-blue-600">Profile</a>
+        <a href="create.html" class="text-sm font-medium text-gray-700 hover:text-blue-600">Create</a>
+        <a href="templates.html" class="text-sm font-medium text-gray-700 hover:text-blue-600">Templates</a>
+        <a href="about.html" class="text-sm font-medium text-gray-700 hover:text-blue-600">About</a>
+      </div>
+      <button id="hamburger" class="md:hidden text-gray-700" onclick="toggleSidebar()">☰</button>
+    </div>
+  </nav>
+
+<!-- Hero Section -->
+<header class="relative bg-cover bg-center h-[80vh]" style="background-image: url('assets/hero.jpg');">
+  <div class="absolute inset-0 bg-black opacity-40"></div>
+  <div class="relative z-10 flex flex-col justify-center items-center h-full text-white text-center px-6 py-8 space-y-6">
+    <img src="assets/logo.png" alt="Legalese Logo" class="w-24 h-24 rounded-full shadow-lg bg-white p-1" />
+    <h1 class="text-5xl font-bold">Legalese</h1>
+    <p class="text-lg max-w-xl">
+      An intelligent, modular, and verifiable smart contract platform designed for modern legal workflows.
+    </p>
+    <a href="create.html" class="bg-blue-600 text-white px-8 py-3 rounded-lg shadow-md hover:bg-blue-700 transition duration-300">
+      Launch Editor
+    </a>
+  </div>
+</header>
+
+<!-- Main Content -->
+<main class="flex-1 max-w-4xl mx-auto px-6 py-20 text-center">
+  <h2 class="text-3xl font-semibold text-blue-700 mb-4">What is Legalese?</h2>
+  <p class="text-gray-700">
+    Legalese is a tool designed for the future of legal documentation. Instead of relying on outdated word processors
+    and confusing templates, we offer a modular editor that’s intuitive, secure, and collaborative.
+  </p>
+  <p class="mt-4 text-gray-700">
+    You can hash your documents to the blockchain, generate contracts with AI, and even install the platform on your device
+    as a mobile app or desktop tool.
+  </p>
+</main>
+
+<!-- About Summary Section -->
+<section class="bg-white py-20 px-6 mt-20">
+  <div class="max-w-4xl mx-auto text-center">
+    <h2 class="text-3xl font-semibold text-blue-700 mb-4">About Legalese</h2>
+    <p class="text-gray-700">
+      Legalese is more than just a contract tool — it's a smart legal studio. Built for legal professionals,
+      technologists, and entrepreneurs, Legalese enables seamless creation, verification, and deployment of digital legal instruments.
+    </p>
+    <p class="mt-4 text-gray-700">
+      Our mission is to empower users with clarity, automation, and trust in legal documentation by integrating modern
+      UX with the power of blockchain and AI technologies.
+    </p>
+  </div>
+</section>
+
+  <!-- Footer -->
+  <footer class="bg-white py-4 text-center text-sm text-gray-500 border-t">
+    <p>&copy; 2025 Legalese. All rights reserved.</p>
+  </footer>
+
+  <script>
+    function toggleSidebar() {
+      const sidebar = document.getElementById("sidebar");
+      if (sidebar) {
+        sidebar.classList.toggle("translate-x-[-100%]");
+        sidebar.classList.toggle("hidden");
+      }
+    }
+  </script>
+</body>
+</html>
